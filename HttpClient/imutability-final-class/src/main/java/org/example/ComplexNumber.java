@@ -34,4 +34,22 @@ public final class ComplexNumber {
         double denominator = other.real * other.real + other.imaginary * other.imaginary;
         return new ComplexNumber((real * other.real + imaginary * other.imaginary) / denominator, (imaginary * other.real - real * other.imaginary) / denominator);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this)
+            return true;
+        if (!(obj instanceof ComplexNumber))
+            return false;
+        ComplexNumber other = (ComplexNumber) obj;
+        return real == other.real && imaginary == other.imaginary;
+    }
+    @Override
+    public String toString() {
+        return real + " + " + imaginary + "i";
+    }
+    @Override
+    public int hashCode() {
+        return 31 * Double.hashCode(real) + Double.hashCode(imaginary);
+    }
 }

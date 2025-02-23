@@ -6,9 +6,9 @@ public class Main {
     public static void main(String[] args) {
         ComplexNumber a = new ComplexNumber(1, 2);
         ComplexNumber b = new ComplexNumber(3, 4);
-        ComplexNumber c = a.plus(b);
-        System.out.println(c.realPart() + " + " + c.imaginaryPart() +"i");
-        ComplexNumber d = a.minus(b);
-        System.out.println(d.realPart() + " " + d.imaginaryPart() +"i");
+        System.out.println(a.plus(b));
+        System.out.println(a.minus(b));
+        System.out.println(a.times(b));
+        System.out.println(a.dividedBy(b));
   }
 }
