@@ -1,15 +1,15 @@
 package org.example;
 
 public class Car {
-  private String model;
-  private String colour;
-  private String countryOfOrigin;
-  private int year;
-  private int mileage;
-  private double engineSize;
-  private String wheelDrive;
-  private String fuelType;
-  private double fuelConsumption;
+  private final String model;
+  private final String colour;
+  private final String countryOfOrigin;
+  private final int year;
+  private final int mileage;
+  private final double engineSize;
+  private final String wheelDrive;
+  private final String fuelType;
+  private final double fuelConsumption;
 
   // Private constructor
   Car(CarBuilder builder) {
@@ -21,6 +21,7 @@ public class Car {
     this.engineSize = builder.engineSize;
     this.wheelDrive = builder.wheelDrive;
     this.fuelType = builder.fuelType;
+    this.fuelConsumption = builder.fuelConsumption;
 
     if (builder.fuelConsumption < 0) {
       throw new IllegalArgumentException("Fuel consumption cannot be negative");
@@ -59,31 +60,7 @@ public class Car {
 
   @Override
   public String toString() {
-    return "Car{"
-        + "model='"
-        + model
-        + '\''
-        + ", colour='"
-        + colour
-        + '\''
-        + ", countryOfOrigin='"
-        + countryOfOrigin
-        + '\''
-        + ", year="
-        + year
-        + ", mileage="
-        + mileage
-        + ", engineSize="
-        + engineSize
-        + ", wheelDrive='"
-        + wheelDrive
-        + '\''
-        + ", fuelType='"
-        + fuelType
-        + '\''
-        + ", fuelConsumption="
-        + fuelConsumption
-        + '}';
+    return STR."Car{model='\{model}', colour='\{colour}', countryOfOrigin='\{countryOfOrigin}', year=\{year}, mileage=\{mileage}, engineSize=\{engineSize}, wheelDrive='\{wheelDrive}', fuelType='\{fuelType}', fuelConsumption=\{fuelConsumption}}";
   }
 
   // Car builder class
