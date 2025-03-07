@@ -19,7 +19,7 @@ public class ReadFormDataServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         String title = "Reading Form Data";
-        String docType = "<!DOCTYPE html>\n";
+        String docType = "<!doctype html public \"-//w3c//dtd html 4.0 " + "transitional//en\">\n";
 
         out.println(docType +
                 "<html>\n" +
