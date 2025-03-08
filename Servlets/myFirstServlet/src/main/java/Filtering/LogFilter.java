@@ -1,9 +1,11 @@
+package Filtering;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 import java.util.Date;
 
-@WebFilter("/filtering")
+@WebFilter("//myFirstServlet/filtering")
 public class LogFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
@@ -19,11 +21,7 @@ public class LogFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        // Get init parameter
-        String testParam = filterConfig.getInitParameter( "test-Param");
-
-        // Print the init parameter
-        System.out.println( "Init parameter: " + testParam);
+        System.out.println("LogFilter initialized!");
     }
 
     @Override
