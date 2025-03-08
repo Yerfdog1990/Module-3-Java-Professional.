@@ -6,9 +6,9 @@
 </head>
 <body>
 <h2>Enter Your Details:</h2>
-<form action="readFormData" method="get">
-    <label for="username">Name:</label>
-    <input type="text" id="username" name="username"><br><br>
+<form action="readCookies" method="get">
+    <label for="userName">Name:</label>
+    <input type="text" id="userName" name="userName"><br><br>
 
     <label>Gender:</label>
     <input type="radio" name="gender" value="male"> Male
