@@ -1,4 +1,4 @@
-package MVC_pattern;
+package mvc.pattern;
 
 import lombok.Data;
 

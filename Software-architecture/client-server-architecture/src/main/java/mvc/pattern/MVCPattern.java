@@ -1,4 +1,4 @@
-package MVC_pattern;
+package mvc.pattern;
 
 public class MVCPattern {
   public static void main(String[] args) {

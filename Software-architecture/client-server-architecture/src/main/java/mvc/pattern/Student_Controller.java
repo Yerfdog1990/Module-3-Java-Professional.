@@ -1,4 +1,4 @@
-package MVC_pattern;
+package mvc.pattern;
 
 /*
 Acts as an intermediary between the Model and the View. Contains references to the Model and View objects.
