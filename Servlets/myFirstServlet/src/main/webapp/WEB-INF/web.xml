@@ -6,7 +6,7 @@
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
     <servlet-name>ErrorHandler</servlet-name>
-    <servlet-class>Exceptions.ErrorHandler</servlet-class>
+    <servlet-class>servlet.exceptions.ErrorHandler</servlet-class>
   </servlet>
 
   <!-- servlet mappings -->

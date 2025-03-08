@@ -1,4 +1,4 @@
-package HttpStatusCode;
+package servlet.http.status.code;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

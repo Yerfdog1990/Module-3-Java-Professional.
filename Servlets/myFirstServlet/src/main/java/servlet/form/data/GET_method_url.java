@@ -1,4 +1,4 @@
-package FormData;
+package servlet.form.data;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

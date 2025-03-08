@@ -1,4 +1,4 @@
-package PassDataToServlet;
+package servlet.pass.data.to.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;

@@ -1,4 +1,4 @@
-package ClientRequest;
+package servlet.client.request;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

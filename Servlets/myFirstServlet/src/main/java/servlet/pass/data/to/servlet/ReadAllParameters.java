@@ -1,4 +1,4 @@
-package PassDataToServlet;
+package servlet.pass.data.to.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
