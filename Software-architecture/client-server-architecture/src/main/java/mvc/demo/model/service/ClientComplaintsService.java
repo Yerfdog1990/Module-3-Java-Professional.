@@ -1,4 +1,7 @@
 package mvc.demo.model.service;
 
-public interface ClientComplaintsService {
+import mvc.demo.model.Service;
+
+public interface ClientComplaintsService extends Service {
+  String getComplaints();
 }

@@ -1,4 +1,8 @@
 package mvc.demo.model.service;
 
-public class ChefService {
+import java.util.List;
+import mvc.demo.model.Service;
+
+public interface ChefService extends Service {
+  Menu prepareMenu(List<String> commandItems);
 }

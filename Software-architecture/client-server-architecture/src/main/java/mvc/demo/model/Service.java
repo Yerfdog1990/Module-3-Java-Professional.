@@ -1,4 +1,3 @@
 package mvc.demo.model;
 
-public interface Service {
-}
+public interface Service {}

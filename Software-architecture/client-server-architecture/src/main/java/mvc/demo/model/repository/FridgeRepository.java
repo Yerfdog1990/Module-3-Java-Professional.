@@ -1,4 +1,5 @@
 package mvc.demo.model.repository;
 
-public class FridgeRepository {
+public interface FridgeRepository {
+  boolean hasIngredient(String ingredient);
 }
