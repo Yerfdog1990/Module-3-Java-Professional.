@@ -1,4 +1,4 @@
-package adapterdesign;
+package pattern.adaptor;
 
 public class PlayMP4 implements AdvancedMediaPlayer{
     @Override

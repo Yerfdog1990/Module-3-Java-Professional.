@@ -1,4 +1,4 @@
-package adapterdesign;
+package pattern.adaptor;
 
 public interface AdvancedMediaPlayer {
     void playVlc(String fileName);

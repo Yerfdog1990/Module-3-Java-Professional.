@@ -1,4 +1,4 @@
-package adapterdesign;
+package pattern.adaptor;
 
 public class AudioPlayer implements MediaPlayer{
     @Override
