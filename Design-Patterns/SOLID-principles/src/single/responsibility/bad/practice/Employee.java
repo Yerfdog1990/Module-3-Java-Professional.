@@ -1,4 +1,4 @@
-package single.responsibility.poor.practice;
+package single.responsibility.bad.practice;
 
 // Single Responsibility Principle
 //The single responsibility principle states that every class must have a single, focused responsibility, a single reason to change.
