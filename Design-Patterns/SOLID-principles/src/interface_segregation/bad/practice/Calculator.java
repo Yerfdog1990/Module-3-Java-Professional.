@@ -38,4 +38,10 @@ class Main{
         circleArea.calculateArea(10);
         circleArea.calculateArea(10, 20);
     }
+    /*
+    The issue with this is that a Rectangle class is forced to implement a method calculateArea(double radius), which it does not need.
+    On the other hand, a Circle class is forced to implement calculateArea(double length, double breath), which it does not need.
+    To overcome this, we can segregate the interface and have two separate interfaces each having one method to be implemented separately.
+    This will allow individual shapes to decide what to implement.
+     */
 }
