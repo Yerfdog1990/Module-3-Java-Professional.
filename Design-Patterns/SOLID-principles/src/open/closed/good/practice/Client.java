@@ -1,6 +1,6 @@
 package open.closed.good.practice;
 
-public class Main {
+public class Client {
     public static void main(String[] args) {
         IAreaCalculator rectangle = new Rectangle();
         rectangle.calculateArea();
