@@ -1,4 +1,4 @@
-package structural.pattern.bridge.apply;
+package structural.pattern.bridge.apply1;
 
 public abstract class Book {
     protected LibraryAPI libraryAPI;

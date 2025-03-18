@@ -1,14 +1,13 @@
 package structural.pattern.adaptor;
 
-public class MediaAdaptor implements MediaPlayer{
+public class MediaAdapter implements MediaPlayer{
     AdvancedMediaPlayer advancedMediaPlayer;
 
-    public MediaAdaptor(String audioType) {
+    public MediaAdapter(String audioType) {
         if(audioType.equalsIgnoreCase("vlc")){
             advancedMediaPlayer = new PlayVLC();
-        }
-        else if(audioType.equalsIgnoreCase("mp4")){
-            advancedMediaPlayer = new PlayMP4();
+        }else if(audioType.equalsIgnoreCase("mp4")){
+      advancedMediaPlayer = new PlayMP4();
         }
     }
     @Override

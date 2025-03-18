@@ -1,4 +1,4 @@
-package structural.pattern.bridge.apply;
+package structural.pattern.bridge.apply1;
 
 public class Programming extends Book{
     public Programming(LibraryAPI libraryAPI) {
