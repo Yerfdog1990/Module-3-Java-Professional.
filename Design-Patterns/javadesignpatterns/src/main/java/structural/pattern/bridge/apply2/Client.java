@@ -7,5 +7,7 @@ public class Client {
         System.out.println("=========================");
         Subject order = new Subject(electricity);
         order.orderEquipment();
+        Subject subject1 = new Subject(electricity);
+        subject1.orderEquipment();
     }
 }
