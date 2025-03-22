@@ -2,7 +2,7 @@ package structural.pattern.composite.apply1;
 
 // Extend leaf
 public class Circle extends Dot{
-private int radius;
+private final int radius;
 public Circle(int x, int y, int radius) {
     super(x, y);
     this.radius = radius;
