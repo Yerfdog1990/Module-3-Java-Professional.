@@ -2,7 +2,7 @@ package concurrencyannotations;
 
 import net.jcip.annotations.NotThreadSafe;
 
-@NotThreadSafe
+@NotThreadSafe // This class can cause race conditions if accessed by multiple threads.
 public class UnsafeSequence {
     private int count = 0;
     public void getCount() {
@@ -24,3 +24,9 @@ public class UnsafeSequence {
         t2.start();
     }
 }
+/*
+@NotThreadSafe
+📌 Indicates that a class is not thread-safe.
+Used as a warning that multiple threads can cause unexpected behavior.
+If used in a multithreaded environment, the developer must add synchronization.
+ */
