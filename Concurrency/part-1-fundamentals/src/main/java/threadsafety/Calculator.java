@@ -76,8 +76,7 @@ class VolumeCalculator {
   }
 
   public double getVolumeOfSphere() {
-    return 4
-        / 3
+    return 4 / 3
         * Math.PI
         * calculator.getRadius()
         * calculator.getRadius()
