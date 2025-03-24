@@ -8,21 +8,18 @@ public class TransitivityExample {
         int x = example.writer();
         int y = example.reader1();
         int z = example.reader2();
-        System.out.println("x: " + x + "\ny: " + y + "\nz: " + z);
+        System.out.println("Count increment to: " + x + "\nCount incremented to: " + y + "\nCount incremented to: " + z);
     }
     public int writer() {
-        int x = count++; // (1)
-        return x;
+        return count++; // (1)
     }
 
     public int reader1() {
-        int y = count++; // (2) Happens-after (1)
-        return y;
+        return count++; // (2) Happens-after (1)
     }
 
     public int reader2() {
-        int z = count++; // (3) Happens-after (2)
-        return z;
+        return count++; // (3) Happens-after (2)
     }
 }
 
