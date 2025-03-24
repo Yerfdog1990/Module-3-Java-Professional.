@@ -6,7 +6,7 @@ import static java.lang.Thread.sleep;
 
 @ThreadSafe
 public class SharedResource {
-    private int counter = 10;
+    private int counter = 0;
     public static void main(String[] args) {
         SharedResource resource = new SharedResource();
       Thread thread1 = new Thread(()->{
@@ -41,4 +41,13 @@ public class SharedResource {
   }
 }
     
+/*
+Monitor Lock Rule
+Definition:
+An unlock (unlock()) on a monitor lock happens-before every subsequent lock (lock()) on the same monitor.
 
+✅ Guarantees:
+increment() modifies counter, and the change is visible to getCounter().
+Synchronization prevents reordering.
+
+ */
