@@ -1,4 +1,4 @@
-package org.example;
+package org.example.synchronization;
 
 public class Synchronization {
   public static void main(String[] args) {
