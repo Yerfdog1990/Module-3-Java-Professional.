@@ -5,7 +5,7 @@ Program order rule.
 Each action in a thread happens‐before every action in that thread that comes later in the program order.
  */
 public class ProgramOrderDemo {
-    static int x;
+    private static int x;
     public static void main(String[] args) {
 
         executeInOrder();
