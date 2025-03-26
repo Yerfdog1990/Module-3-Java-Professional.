@@ -3,7 +3,7 @@ package org.example.concurrentcollections;
 import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class ConcurrentCollectionDemo {
+public class ConcurrentCollectionDemo1 {
   static CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();
 
   Runnable runnable =
@@ -24,7 +24,7 @@ public class ConcurrentCollectionDemo {
     list.add("A");
     list.add("B");
     list.add("C");
-    ConcurrentCollectionDemo mainThread = new ConcurrentCollectionDemo();
+    ConcurrentCollectionDemo1 mainThread = new ConcurrentCollectionDemo1();
     Thread t1 = new Thread(mainThread.runnable);
     t1.start();
 
