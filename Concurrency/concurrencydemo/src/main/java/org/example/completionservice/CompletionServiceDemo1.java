@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
-public class CompletionServiceDemo {
+public class CompletionServiceDemo1 {
   public static void main(String[] args) {
     List<Callable<Double>> jobs = new ArrayList<>();
     Parent month1 = new Parent(1000, 1000);
