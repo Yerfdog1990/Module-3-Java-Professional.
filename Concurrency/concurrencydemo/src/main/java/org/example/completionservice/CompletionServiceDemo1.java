@@ -73,7 +73,7 @@ class Parent implements Callable<Double> {
 class Child {
   private double totalConsumed;
 
-  public double consume(double money) {
+  protected double consume(double money) {
     System.out.println("Child has consumed $" + money);
     totalConsumed += money;
     return totalConsumed;
