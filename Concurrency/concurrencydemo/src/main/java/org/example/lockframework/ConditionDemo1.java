@@ -4,7 +4,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class ProducerConsumerDemo {
+public class ConditionDemo1 {
   public static void main(String[] args) throws InterruptedException {
     Desktop desktop = new Desktop("This is a document");
     Thread producer = new Thread(desktop::typeWords);
@@ -34,7 +34,7 @@ class Desktop {
         condition.await();
       }
       System.out.println("Document is ready to be typed");
-      System.out.println(document.trim().length() + " words types on a desktop.");
+      System.out.println("Number of characters typed: " + document.trim().length());
       isDone = true;
       condition.signal();
     } catch (InterruptedException e) {
@@ -52,7 +52,7 @@ class Desktop {
       }
       System.out.println("Document is ready to be printed");
       Thread.sleep(1000);
-      System.out.println("Document printed.");
+      System.out.println("Number of characters printed: " + document.trim().length());
       isDone = false;
       condition.signal();
     } catch (Exception e) {
