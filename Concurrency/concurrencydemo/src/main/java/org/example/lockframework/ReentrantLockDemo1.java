@@ -3,9 +3,9 @@ package org.example.lockframework;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class LockDemo1 {
+public class ReentrantLockDemo1 {
   public static void main(String[] args) {
-    LockDemo1 lockDemo1 = new LockDemo1();
+    ReentrantLockDemo1 lockDemo1 = new ReentrantLockDemo1();
     Thread t1 = new Thread(lockDemo1::firsIncrement, "Thread 1");
     Thread t2 = new Thread(lockDemo1::firsIncrement, "Thread 2");
     t1.start();
