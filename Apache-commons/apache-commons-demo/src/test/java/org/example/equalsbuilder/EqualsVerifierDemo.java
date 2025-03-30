@@ -2,20 +2,17 @@ package org.example.equalsbuilder;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import nl.jqno.equalsverifier.EqualsVerifier;
 
-public class EqualsWithInheritance {
+public class EqualsVerifierDemo {
   public static void main(String[] args) {
-    DogInfo dog1 = new DogInfo("Canis lupus familiaris", "Bulldog");
-    DogInfo dog2 = new DogInfo("Canis lupus familiaris", "Bulldog");
-    System.out.println("dog1.equals(dog2): " + dog1.equals(dog2));
-    System.out.println("dog1 == dog2: " + (dog1 == dog2));
-    System.out.println(
-        "dog1.hashCode() == dog2.hashCode(): " + (dog1.hashCode() == dog2.hashCode()));
+    // Verify equals and hashCode for DogInfo
+    EqualsVerifier.forClass(DogInfo.class).verify();
   }
 }
 
 class AnimalInfo {
-  protected String species;
+  final String species;
 
   public AnimalInfo(String species) {
     this.species = species;
@@ -37,8 +34,8 @@ class AnimalInfo {
   }
 }
 
-final class DogInfo extends AnimalInfo {
-  private String breed;
+class DogInfo extends AnimalInfo {
+  String breed;
 
   public DogInfo(String species, String breed) {
     super(species);
