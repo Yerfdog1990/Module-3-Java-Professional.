@@ -1,6 +1,7 @@
 package org.example.equalsbuilder;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public class ComparingArrays {
   public static void main(String[] args) {
@@ -8,6 +9,7 @@ public class ComparingArrays {
     PersonalInfo p2 = new PersonalInfo("John", new int[] {1, 2, 3});
     System.out.println("p1.equals(p2): " + p1.equals(p2));
     System.out.println("p1 == p2: " + (p1 == p2));
+    System.out.println("p1.hashCode() == p2.hashCode(): " + (p1.hashCode() == p2.hashCode()));
   }
 }
 
@@ -28,6 +30,11 @@ class PersonalInfo {
 
     PersonalInfo other = (PersonalInfo) obj;
     return new EqualsBuilder().append(name, other.name).append(scores, other.scores).isEquals();
+  }
+
+  @Override
+  public int hashCode() {
+    return new HashCodeBuilder(17, 37).append(name).append(scores).toHashCode();
   }
 }
 /*
