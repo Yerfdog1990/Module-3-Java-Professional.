@@ -9,6 +9,7 @@ public class ExcludingFields {
     PersonInfo p2 = new PersonInfo("John", 20);
     System.out.println("p1.equals(p2): " + p1.equals(p2));
     System.out.println("p1 == p2: " + (p1 == p2));
+    System.out.println("p1.hashCode() == p2.hashCode(): " + (p1.hashCode() == p2.hashCode()));
   }
 }
 
@@ -32,6 +33,14 @@ class PersonInfo {
 
     PersonInfo other = (PersonInfo) obj;
     return new EqualsBuilder().append(name, other.name).append(age, other.age).isEquals();
+  }
+
+  @Override
+  public int hashCode() {
+    return new org.apache.commons.lang3.builder.HashCodeBuilder(17, 37)
+        .append(name)
+        .append(age)
+        .toHashCode();
   }
 }
 
