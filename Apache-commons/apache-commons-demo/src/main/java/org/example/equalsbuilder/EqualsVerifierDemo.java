@@ -2,19 +2,22 @@ package org.example.equalsbuilder;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-import nl.jqno.equalsverifier.EqualsVerifier;
 
 public class EqualsVerifierDemo {
   public static void main(String[] args) {
-    // Verify equals and hashCode for DogInfo
-    EqualsVerifier.forClass(DogInfo.class).verify();
+    Dogs dog1 = new Dogs("Canis lupus familiaris", "Bulldog");
+    Dogs dog2 = new Dogs("Canis lupus familiaris", "Bulldog");
+    System.out.println("dog1.equals(dog2): " + dog1.equals(dog2));
+    System.out.println("dog1 == dog2: " + (dog1 == dog2));
+    System.out.println(
+        "dog1.hashCode() == dog2.hashCode(): " + (dog1.hashCode() == dog2.hashCode()));
   }
 }
 
-class AnimalInfo {
+class Animals {
   final String species;
 
-  public AnimalInfo(String species) {
+  public Animals(String species) {
     this.species = species;
   }
 
@@ -24,7 +27,7 @@ class AnimalInfo {
     if (obj == null) return false;
     if (getClass() != obj.getClass()) return false;
 
-    AnimalInfo other = (AnimalInfo) obj;
+    Animals other = (Animals) obj;
     return new EqualsBuilder().append(species, other.species).isEquals();
   }
 
@@ -34,10 +37,10 @@ class AnimalInfo {
   }
 }
 
-class DogInfo extends AnimalInfo {
+class Dogs extends Animals {
   String breed;
 
-  public DogInfo(String species, String breed) {
+  public Dogs(String species, String breed) {
     super(species);
     this.breed = breed;
   }
@@ -46,7 +49,7 @@ class DogInfo extends AnimalInfo {
   public boolean equals(Object obj) {
     if (obj == null || obj.getClass() != getClass()) return false;
 
-    DogInfo other = (DogInfo) obj;
+    Dogs other = (Dogs) obj;
     return new EqualsBuilder()
         .appendSuper(super.equals(obj)) // Include superclass comparison
         .append(breed, other.breed)
