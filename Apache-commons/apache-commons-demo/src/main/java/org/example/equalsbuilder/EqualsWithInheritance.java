@@ -30,6 +30,11 @@ class Animal {
     Animal other = (Animal) obj;
     return new EqualsBuilder().append(species, other.species).isEquals();
   }
+
+  @Override
+  public int hashCode() {
+    return new HashCodeBuilder(17, 37).append(species).toHashCode();
+  }
 }
 
 class Dog extends Animal {
