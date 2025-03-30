@@ -47,4 +47,9 @@ Why Use EqualsBuilder?
 2.Handling complex comparisons (including float, double, and arrays).
 3.Maintaining consistency between equals() and hashCode().
 4.Reducing boilerplate code in equals() implementations.
+
+Explanation
+Step 1: Check for null, reference equality (this == obj), and class type.
+Step 2: Use EqualsBuilder.append() to compare individual fields.
+Step 3: Call isEquals() to return the final result.
  */
