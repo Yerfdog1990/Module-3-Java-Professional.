@@ -1,64 +1,49 @@
 package org.example.equalsbuilder;
 
+import java.util.Objects;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-public class EqualsVerifierDemo {
-  public static void main(String[] args) {
-    Dogs dog1 = new Dogs("Canis lupus familiaris", "Bulldog");
-    Dogs dog2 = new Dogs("Canis lupus familiaris", "Bulldog");
-    System.out.println("dog1.equals(dog2): " + dog1.equals(dog2));
-    System.out.println("dog1 == dog2: " + (dog1 == dog2));
-    System.out.println(
-        "dog1.hashCode() == dog2.hashCode(): " + (dog1.hashCode() == dog2.hashCode()));
-  }
-}
-
-class Animals {
-  final String species;
-
-  public Animals(String species) {
-    this.species = species;
-  }
+@AllArgsConstructor
+@Getter
+class Car {
+  private final String fuel;
+  private final int year;
 
   @Override
-  public boolean equals(Object obj) {
-    if (this == obj) return true;
-    if (obj == null) return false;
-    if (getClass() != obj.getClass()) return false;
-
-    Animals other = (Animals) obj;
-    return new EqualsBuilder().append(species, other.species).isEquals();
+  public boolean equals(Object o) {
+    if (o == null || getClass() != o.getClass()) return false;
+    Car car = (Car) o;
+    return new EqualsBuilder().append(fuel, car.fuel).append(year, car.year).isEquals();
   }
 
   @Override
   public int hashCode() {
-    return new HashCodeBuilder(17, 37).append(species).toHashCode();
+    return new HashCodeBuilder(17, 37).append(fuel).append(year).toHashCode();
   }
 }
 
-class Dogs extends Animals {
-  String breed;
+final class Mazda extends Car {
+  private final String model;
 
-  public Dogs(String species, String breed) {
-    super(species);
-    this.breed = breed;
+  public Mazda(String fuel, int year, String model) {
+    super(fuel, year);
+    this.model = model;
   }
 
   @Override
-  public boolean equals(Object obj) {
-    if (obj == null || obj.getClass() != getClass()) return false;
-
-    Dogs other = (Dogs) obj;
-    return new EqualsBuilder()
-        .appendSuper(super.equals(obj)) // Include superclass comparison
-        .append(breed, other.breed)
-        .isEquals();
+  public boolean equals(Object o) {
+    if (o == null || getClass() != o.getClass()) return false;
+    if (!super.equals(o)) return false;
+    Mazda mazda = (Mazda) o;
+    return Objects.equals(model, mazda.model);
   }
 
   @Override
   public int hashCode() {
-    return new HashCodeBuilder(17, 37).appendSuper(super.hashCode()).append(breed).toHashCode();
+    return Objects.hash(super.hashCode(), model);
   }
 }
 /*
