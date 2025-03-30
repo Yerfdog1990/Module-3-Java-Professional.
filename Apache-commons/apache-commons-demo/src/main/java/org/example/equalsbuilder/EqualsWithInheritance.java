@@ -5,8 +5,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public class EqualsWithInheritance {
   public static void main(String[] args) {
-    DogInfo dog1 = new DogInfo("Canis lupus familiaris", "Bulldog");
-    DogInfo dog2 = new DogInfo("Canis lupus familiaris", "Bulldog");
+    Dogs dog1 = new Dogs("Canis lupus familiaris", "Bulldog");
+    Dogs dog2 = new Dogs("Canis lupus familiaris", "Bulldog");
     System.out.println("dog1.equals(dog2): " + dog1.equals(dog2));
     System.out.println("dog1 == dog2: " + (dog1 == dog2));
     System.out.println(
@@ -27,7 +27,7 @@ class AnimalInfo {
     if (obj == null) return false;
     if (getClass() != obj.getClass()) return false;
 
-    AnimalInfo other = (AnimalInfo) obj;
+    Animals other = (Animals) obj;
     return new EqualsBuilder().append(species, other.species).isEquals();
   }
 
@@ -37,7 +37,7 @@ class AnimalInfo {
   }
 }
 
-final class DogInfo extends AnimalInfo {
+final class DogInfo extends Animals {
   private String breed;
 
   public DogInfo(String species, String breed) {
@@ -49,7 +49,7 @@ final class DogInfo extends AnimalInfo {
   public boolean equals(Object obj) {
     if (obj == null || obj.getClass() != getClass()) return false;
 
-    DogInfo other = (DogInfo) obj;
+    Dogs other = (Dogs) obj;
     return new EqualsBuilder()
         .appendSuper(super.equals(obj)) // Include superclass comparison
         .append(breed, other.breed)
