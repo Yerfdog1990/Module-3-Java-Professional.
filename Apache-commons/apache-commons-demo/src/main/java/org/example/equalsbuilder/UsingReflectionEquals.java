@@ -1,6 +1,7 @@
 package org.example.equalsbuilder;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public class UsingReflectionEquals {
   public static void main(String[] args) {
@@ -8,6 +9,7 @@ public class UsingReflectionEquals {
     Person p2 = new Person("John", 20);
     System.out.println("p1.equals(p2): " + p1.equals(p2));
     System.out.println("p1 == p2: " + (p1 == p2));
+    System.out.println("p1.hashCode() == p2.hashCode(): " + (p1.hashCode() == p2.hashCode()));
   }
 }
 
@@ -23,6 +25,11 @@ class Person {
   @Override
   public boolean equals(Object obj) {
     return EqualsBuilder.reflectionEquals(this, obj);
+  }
+
+  @Override
+  public int hashCode() {
+    return new HashCodeBuilder(17, 37).append(name).append(age).toHashCode();
   }
 }
 /*
