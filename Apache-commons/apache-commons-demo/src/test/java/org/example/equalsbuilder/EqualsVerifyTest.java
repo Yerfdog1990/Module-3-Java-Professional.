@@ -3,7 +3,7 @@ package org.example.equalsbuilder;
 import nl.jqno.equalsverifier.EqualsVerifier;
 import org.junit.jupiter.api.Test;
 
-public class CarTest {
+public class EqualsVerifyTest {
   @Test
   public void testEquals() {
     EqualsVerifier.simple().forClass(Car.class).verify();
