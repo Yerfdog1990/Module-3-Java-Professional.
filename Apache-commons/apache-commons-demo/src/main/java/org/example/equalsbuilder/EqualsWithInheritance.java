@@ -48,3 +48,11 @@ class Dog extends Animal {
         .isEquals();
   }
 }
+/*
+Handling equals() with Inheritance
+If a class extends another class, use appendSuper() to include the parent class's equality check.
+
+Explanation
+appendSuper(super.equals(obj)) ensures the parent class’s equals() check is included.
+This guarantees correct comparison even when dealing with inheritance.
+ */
