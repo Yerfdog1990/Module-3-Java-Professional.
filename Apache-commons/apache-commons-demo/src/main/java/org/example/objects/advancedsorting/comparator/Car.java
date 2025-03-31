@@ -13,7 +13,7 @@ public class Car {
 
   @Override
   public String toString() {
-    return model + " " + year;
+    return model + " : " + year;
   }
 }
 
