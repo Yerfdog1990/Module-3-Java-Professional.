@@ -31,7 +31,7 @@ class SortByAge implements Comparator<Student> {
   }
 }
 
-class ComparatorExample {
+class CompareSingleField {
   public static void main(String[] args) {
     List<Student> studentList = new ArrayList<>();
     studentList.add(new Student("John", 20));
