@@ -1,4 +1,4 @@
-package org.example.objects.advancedsorting.comparable;
+package org.example.objects.advancedsorting.comparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
