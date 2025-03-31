@@ -1,4 +1,4 @@
-package org.example.equalsbuilder;
+package org.example.objects.equalsbuilder;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.EqualsExclude;

@@ -1,4 +1,4 @@
-package org.example.equalsbuilder;
+package org.example.objects.equalsbuilder;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package org.example.equalsbuilder;
+package org.example.objects.equalsbuilder;
 
 import java.util.Objects;
 import lombok.AllArgsConstructor;
