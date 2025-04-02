@@ -1,4 +1,4 @@
-package org.example.objects.objectutils;
+package org.example.objects.objectutils.generics;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

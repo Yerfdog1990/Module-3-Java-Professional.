@@ -1,4 +1,4 @@
-package org.example.objects.objectutils;
+package org.example.objects.objectutils.generics;
 
 import java.util.ArrayList;
 import java.util.List;
