@@ -13,6 +13,9 @@ public class Fibonacci_Loop {
   }
 
   public static void main(String[] args) {
-    printFibonacci(100);
+    double startTime = System.currentTimeMillis();
+    printFibonacci(10);
+    double endTime = System.currentTimeMillis();
+    System.out.println("\nTime taken: " + (endTime - startTime) + " seconds");
   }
 }
