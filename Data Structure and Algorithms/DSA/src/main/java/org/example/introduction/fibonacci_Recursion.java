@@ -25,14 +25,20 @@ public class fibonacci_Recursion {
 
   public static void main(String[] args) {
     // Calling method 1
+    double startTime1 = System.currentTimeMillis();
     int count = 10;
     System.out.print("Fibonacci series: ");
     for (int i = 0; i < count; i++) {
       System.out.print(findFibonacciSeries1(i) + ", ");
     }
+    double endTime1 = System.currentTimeMillis();
+    System.out.println("\nTime taken using method 1: " + (endTime1 - startTime1) + " seconds");
     System.out.println();
     // Calling method 2
+    double startTime2 = System.currentTimeMillis();
     System.out.print("fibonacci series: " + 0 + ", " + 1 + ", ");
     findFibonacciSeries2(0, 1);
+    double endTime2 = System.currentTimeMillis();
+    System.out.println("\nTime taken using method 2: " + (endTime2 - startTime2) + " seconds");
   }
 }
