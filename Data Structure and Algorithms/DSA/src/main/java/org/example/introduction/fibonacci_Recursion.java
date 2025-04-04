@@ -23,6 +23,18 @@ public class fibonacci_Recursion {
     }
   }
 
+  // Method 3 (using for loop)
+  public static void findFibonacciSeries3(int n) {
+    int digit1 = 0, digit2 = 1;
+    System.out.print("\nFibonacci series: " + digit1 + ", " + digit2 + ", ");
+    for (int i = 2; i < n; i++) {
+      int nextDigit = digit1 + digit2;
+      System.out.print(nextDigit + ", ");
+      digit1 = digit2;
+      digit2 = nextDigit;
+    }
+  }
+
   public static void main(String[] args) {
     // Calling method 1
     double startTime1 = System.currentTimeMillis();
@@ -36,9 +48,15 @@ public class fibonacci_Recursion {
     System.out.println();
     // Calling method 2
     double startTime2 = System.currentTimeMillis();
-    System.out.print("fibonacci series: " + 0 + ", " + 1 + ", ");
+    System.out.print("Fibonacci series: " + 0 + ", " + 1 + ", ");
     findFibonacciSeries2(0, 1);
     double endTime2 = System.currentTimeMillis();
     System.out.println("\nTime taken using method 2: " + (endTime2 - startTime2) + " seconds");
+
+    // Calling method 3 (using for loop)
+    double startTime3 = System.currentTimeMillis();
+    findFibonacciSeries3(10);
+    double endTime3 = System.currentTimeMillis();
+    System.out.println("\nTime taken using method 3: " + (endTime3 - startTime3) + " seconds");
   }
 }
