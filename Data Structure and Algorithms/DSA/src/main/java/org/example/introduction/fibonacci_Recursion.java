@@ -1,18 +1,38 @@
 package org.example.introduction;
 
 public class fibonacci_Recursion {
-  public static int findFibonacciSeries(int n) {
+  // Method 1
+  public static int findFibonacciSeries1(int n) {
     if (n <= 1) {
       return n;
     } else {
-      return findFibonacciSeries(n - 1) + findFibonacciSeries(n - 2);
+      return findFibonacciSeries1(n - 1) + findFibonacciSeries1(n - 2);
+    }
+  }
+
+  // Method 2
+  private static int counter = 2;
+
+  public static void findFibonacciSeries2(int num1, int num2) {
+    if (counter <= 9) {
+      int newNum = num1 + num2;
+      System.out.print(newNum);
+      counter++;
+      System.out.print(", ");
+      findFibonacciSeries2(num2, newNum);
     }
   }
 
   public static void main(String[] args) {
+    // Calling method 1
     int count = 10;
+    System.out.print("Fibonacci series: ");
     for (int i = 0; i < count; i++) {
-      System.out.print(findFibonacciSeries(i) + ", ");
+      System.out.print(findFibonacciSeries1(i) + ", ");
     }
+    System.out.println();
+    // Calling method 2
+    System.out.print("fibonacci series: " + 0 + ", " + 1 + ", ");
+    findFibonacciSeries2(0, 1);
   }
 }
