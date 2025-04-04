@@ -11,4 +11,8 @@ public class Quest {
     this.description = description;
     this.question = question;
   }
+
+  public Quest(String description) {
+    this(description, null);
+  }
 }
