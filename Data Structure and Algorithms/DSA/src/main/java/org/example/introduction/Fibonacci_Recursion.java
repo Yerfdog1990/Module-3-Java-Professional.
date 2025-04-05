@@ -1,16 +1,16 @@
 package org.example.introduction;
 
-public class fibonacci_Recursion {
-  // Method 1
+public class Fibonacci_Recursion {
+  // Method 1: Naive Recursive Approach
   public static int findFibonacciSeries1(int n) {
-    if (n <= 1) {
+    if (n <= 1) { // Base
       return n;
     } else {
       return findFibonacciSeries1(n - 1) + findFibonacciSeries1(n - 2);
     }
   }
 
-  // Method 2
+  // Method 2: Recursive with Counter
   private static int counter = 2;
 
   public static void findFibonacciSeries2(int num1, int num2) {
@@ -20,18 +20,6 @@ public class fibonacci_Recursion {
       counter++;
       System.out.print(", ");
       findFibonacciSeries2(num2, newNum);
-    }
-  }
-
-  // Method 3 (using for loop)
-  public static void findFibonacciSeries3(int n) {
-    int digit1 = 0, digit2 = 1;
-    System.out.print("\nFibonacci series: " + digit1 + ", " + digit2 + ", ");
-    for (int i = 2; i < n; i++) {
-      int nextDigit = digit1 + digit2;
-      System.out.print(nextDigit + ", ");
-      digit1 = digit2;
-      digit2 = nextDigit;
     }
   }
 
@@ -52,11 +40,5 @@ public class fibonacci_Recursion {
     findFibonacciSeries2(0, 1);
     double endTime2 = System.currentTimeMillis();
     System.out.println("\nTime taken using method 2: " + (endTime2 - startTime2) + " seconds");
-
-    // Calling method 3 (using for loop)
-    double startTime3 = System.currentTimeMillis();
-    findFibonacciSeries3(10);
-    double endTime3 = System.currentTimeMillis();
-    System.out.println("\nTime taken using method 3: " + (endTime3 - startTime3) + " seconds");
   }
 }
