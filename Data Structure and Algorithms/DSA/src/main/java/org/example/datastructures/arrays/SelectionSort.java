@@ -53,9 +53,8 @@ public class SelectionSort {
           minIndex = j;
         }
       }
-      int temp = intArray2.get(i);
       intArray2.set(i, intArray2.get(minIndex));
-      intArray2.set(minIndex, temp);
+      intArray2.set(minIndex, intArray2.get(i));
     }
     System.out.print(intArray2);
   }
