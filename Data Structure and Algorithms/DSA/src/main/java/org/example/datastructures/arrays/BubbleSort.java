@@ -5,11 +5,11 @@ import java.util.Arrays;
 public class BubbleSort {
   /*
   How it works:
-  1. Start with the first element of the array and compare it to the next element.
-  2. If the first element is greater than the second, swap them.
-  3. Move to the next pair of elements and repeat the process for the entire array.
-  4. Repeat the entire process for the rest of the array, excluding the last sorted element each time.
-  5. Continue this process until no swaps are needed, indicating that the array is sorted.
+  1. Start with an array containing the values to sort.
+  2. Use an inner loop to compare adjacent values and swap them if the first is greater than the second.
+  3. After each pass of the inner loop, the largest unsorted value "bubbles" to its correct position.
+  4. The inner loop runs fewer iterations on each subsequent pass, as the last elements are already sorted.
+  5. An outer loop ensures the inner loop runs n - 1 times for an array of size n.
 
   Time complexity:
   - Best case: O(n) [when the array is already sorted].
