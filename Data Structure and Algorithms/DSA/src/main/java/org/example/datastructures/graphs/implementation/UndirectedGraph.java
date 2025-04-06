@@ -32,10 +32,25 @@ public class UndirectedGraph {
     System.out.println("Vertex Data: " + vertexData);
   }
 
+  // Method to print connections for each vertex
+  public void printConnections() {
+    System.out.println("\nConnections for each vertex:");
+    for (int i = 0; i < vertexData.size(); i++) {
+      System.out.print(vertexData.get(i) + ": ");
+      for (int j = 0; j < vertexData.size(); j++) {
+        if (adjacencyMatrix[i][j] == 1) { // if there is a connection
+          System.out.print(vertexData.get(j) + " ");
+        }
+      }
+      System.out.println(); // new line
+    }
+  }
+
   // Main method
   public static void main(String[] args) {
     UndirectedGraph graph = new UndirectedGraph();
     graph.printVertexData();
     graph.printAdjacencyMatrix();
+    graph.printConnections();
   }
 }
