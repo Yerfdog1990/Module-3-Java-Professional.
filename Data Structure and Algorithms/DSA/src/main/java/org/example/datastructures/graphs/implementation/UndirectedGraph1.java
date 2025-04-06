@@ -3,12 +3,12 @@ package org.example.datastructures.graphs.implementation;
 import java.util.Arrays;
 import java.util.List;
 
-public class UndirectedGraph {
+public class UndirectedGraph1 {
   private List<String> vertexData; // Store vertex labels
   private int[][] adjacencyMatrix; // Store adjacency relationships
 
   // Constructor to initialize vertexData and adjacencyMatrix
-  public UndirectedGraph() {
+  public UndirectedGraph1() {
     vertexData = Arrays.asList("A", "B", "C", "D");
     adjacencyMatrix =
         new int[][] {
@@ -48,7 +48,7 @@ public class UndirectedGraph {
 
   // Main method
   public static void main(String[] args) {
-    UndirectedGraph graph = new UndirectedGraph();
+    UndirectedGraph1 graph = new UndirectedGraph1();
     graph.printVertexData();
     graph.printAdjacencyMatrix();
     graph.printConnections();
