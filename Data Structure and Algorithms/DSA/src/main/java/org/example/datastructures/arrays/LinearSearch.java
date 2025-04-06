@@ -3,6 +3,26 @@ package org.example.datastructures.arrays;
 import java.util.*;
 
 public class LinearSearch {
+  /*
+   Linear Search Algorithm:
+   - Linear Search is a straightforward method to locate a target value within an array.
+   - It works by iterating through the array sequentially and comparing each element with the target value.
+
+   Steps:
+   1. Start at the first index of the array.
+   2. Check if the current element matches the target value.
+   3. If a match is found, return the index of the matching element.
+   4. If the search reaches the end of the array without finding a match, return -1.
+
+   Characteristics:
+   - It is easy to implement and requires no additional space.
+   - Best for small or unsorted arrays.
+
+   Time Complexity:
+   - Best case: O(1), when the target value is at the first index.
+   - Worst case: O(n), when the target value is not found or is at the last index.
+   - Average case: O(n), where 'n' is the size of the array.
+  */
 
   // Function to perform linear search on the array
   public static int linearSearch(int[] arr, int targetVal) {
