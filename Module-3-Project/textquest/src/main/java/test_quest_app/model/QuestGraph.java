@@ -20,7 +20,7 @@ public class QuestGraph {
 
   public static QuestGraph instance() {
     Quest youLostYourMemoryRight = new Quest("You rejected the challenge.");
-    Quest youLostYourMemory = new Quest("You lost your memory", "Accept the UFO challenge.");
-    return new QuestGraph(youLostYourMemory, youLostYourMemoryRight, null);
+    Quest youLostYourMemoryLeft = new Quest("You lost your memory", "Accept the UFO challenge.");
+    return new QuestGraph(youLostYourMemoryLeft, youLostYourMemoryRight, null);
   }
 }
