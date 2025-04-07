@@ -23,9 +23,12 @@ Weaknesses:
 - May consume more memory due to storage of additional information (like height or balance factor).
 */
 
+import lombok.Data;
+
 // Class to represent a node in the binary tree
+@Data
 public class BalancedTree {
-  String data;
+  private String data;
   BalancedTree left;
   BalancedTree right;
 
