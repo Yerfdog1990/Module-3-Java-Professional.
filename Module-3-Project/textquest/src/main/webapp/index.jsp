@@ -25,6 +25,9 @@
     <br>
     <li>Zeke, the ship's AI, equipped with vast knowledge and advanced problem-solving capabilities.</li>
 </ol>
-<button onclick="alert('Quest started')">Start Game</button>
+<form action="auth" method="post">
+    <input type="text" name="name">
+    <button type="submit">Submit</button>
+</form>
 </body>
 </html>
