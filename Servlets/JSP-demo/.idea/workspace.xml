@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8e703ed-4729-4a50-8266-ef4c5322f59c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../JSP-JSTL/JSP-demo/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../JSP-JSTL/JSP-demo/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../JSP-JSTL/JSP-demo/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../JSP-JSTL/JSP-demo/.idea/google-java-format.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../JSP-JSTL/JSP-demo/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../JSP-JSTL/JSP-demo/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../JSP-JSTL/JSP-demo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../JSP-JSTL/JSP-demo/src/main/java/JSP/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../JSP-JSTL/JSP-demo/src/main/java/JavaBean/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../JSP-JSTL/JSP-demo/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../JSP-JSTL/JSP-demo/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HttpClient/builder-creational-pattern/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HttpClient/builder-creational-pattern/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module-3-Project/textquest/src/main/java/test_quest_app/model/AbstractEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module-3-Project/textquest/src/main/java/test_quest_app/model/Answer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module-3-Project/textquest/src/main/java/test_quest_app/model/Question.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module-3-Project/textquest/src/main/java/test_quest_app/model/QuestionBank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module-3-Project/textquest/src/main/java/test_quest_app/model/Quest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module-3-Project/textquest/src/main/java/test_quest_app/model/QuestGraph.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module-3-Project/textquest/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module-3-Project/textquest/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module-3-Project/textquest/src/test/java/test_quest_app/model/QuestGraphTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +102,6 @@
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
-      <module name="JSP-demo" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,8 +110,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.39" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.39" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
       </set>
     </attachedChunks>
   </component>
@@ -130,10 +125,16 @@
       <updated>1740891970019</updated>
       <workItem from="1740891971343" duration="7297000" />
       <workItem from="1740920894896" duration="4585000" />
+      <workItem from="1744117367767" duration="35000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../../JSP-JSTL/JSP-demo" />
+    </ignored-roots>
   </component>
 </project>
