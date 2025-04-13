@@ -19,7 +19,6 @@
     <h3>${question.content}</h3>
     <form action="${question.type == "LOST" || question.type == "WON" ? 'auth' : 'quest'}" method="get">
         <c:forEach items="${answers}" var="answer">
-            <%--<jsp:useBean id="answer" type="test_quest_app.model.Answer" scope="request"/> --%>
             <input type="radio" name="answerId" value="${answer.id}">${answer.content}<br>
         </c:forEach>
         <button type="submit">${question.type == "LOST" || question.type == "WON" ? 'Play again' : 'Answer'}</button>
