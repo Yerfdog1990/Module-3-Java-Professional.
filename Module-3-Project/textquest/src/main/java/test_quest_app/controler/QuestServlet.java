@@ -13,9 +13,22 @@ import test_quest_app.model.Repository;
 public class QuestServlet extends HttpServlet {
   private final Repository repository = new Repository();
 
+
   @Override
-  protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+  public void doGet(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
+    // Safely retrieve the action parameter
+    String method = req.getParameter("action");
+
+    // Example of null-safe check for "action" parameter
+    if ("forward".equals("action")) {
+      req.getRequestDispatcher("/quest.jsp").forward(req, resp);
+      return;
+    }
+
+    // Other logic
+    req.setAttribute("actionResult", "action" != null ? "action" : "No action provided!");
+
     String answerId = req.getParameter("answerId");
     Question question;
     if (answerId != null) {
@@ -37,12 +50,25 @@ public class QuestServlet extends HttpServlet {
   }
 
   private void addStatistics(HttpServletRequest req) {
-    req.setAttribute("ip", req.getRemoteAddr());
+    String userIp = req.getRemoteAddr();
+    req.setAttribute("ip", userIp);
     HttpSession session = req.getSession();
     req.setAttribute("name", session.getAttribute("name"));
 
     Cookie[] cookies = req.getCookies();
-    req.setAttribute("userName", findCookiesValueByName("gameAttempt", cookies));
+    String attemptValue = findCookiesValueByName("gameAttempt", cookies);
+
+    // Safely compute the new attempt value
+    if (attemptValue != null) {
+      try {
+        int attempt = Integer.parseInt(attemptValue);
+        req.setAttribute("attempt", String.valueOf(attempt + 1));
+      } catch (NumberFormatException e) {
+        req.setAttribute("attempt", "1"); // Default to 1 if parsing fails
+      }
+    } else {
+      req.setAttribute("attempt", "1"); // Default to 1 if cookie is not found
+    }
   }
 
   private String findCookiesValueByName(String name, Cookie[] cookies) {

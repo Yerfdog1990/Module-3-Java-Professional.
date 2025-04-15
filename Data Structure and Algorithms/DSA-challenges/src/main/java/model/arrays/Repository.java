@@ -1,4 +1,3 @@
 package model.arrays;
 
-public class Repository {
-}
+public class Repository {}
