@@ -1,6 +1,7 @@
 package servlets101;
 
 import java.io.IOException;
+import java.util.Enumeration;
 import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,7 +26,7 @@ public class HttpRequestShowCaseServlet extends HttpServlet {
     String remoteUser = req.getRemoteUser();
     String authType = req.getAuthType();
     StringBuilder headersTable = new StringBuilder();
-    var headerNames = req.getHeaderNames();
+    Enumeration<String> headerNames = req.getHeaderNames();
     while (headerNames.hasMoreElements()) {
       String headerName = headerNames.nextElement();
       String headerValue = req.getHeader(headerName);
@@ -39,8 +40,7 @@ public class HttpRequestShowCaseServlet extends HttpServlet {
 
     resp.getWriter()
         .println(
-            """
-<html><body>""");
+            "<html>"+"<body>"+"<h1>Hello World from Servlet (REQUEST)!</h1>");
     resp.getWriter().println("<table>");
     resp.getWriter().println("<tr><th>Name</th><th>Value</th></tr>");
     resp.getWriter().println("<tr><td>Method</td><td>" + method + "</td></tr>");
@@ -56,8 +56,6 @@ public class HttpRequestShowCaseServlet extends HttpServlet {
     resp.getWriter().println(headersTable);
     resp.getWriter().println("</table>");
     resp.getWriter()
-        .println(
-            """
-</body></html>""");
+        .println("</body>"+"</html>");
   }
 }
